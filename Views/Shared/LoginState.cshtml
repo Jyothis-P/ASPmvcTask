@@ -1,0 +1,12 @@
+﻿@if (string.IsNullOrEmpty(Convert.ToString(Session["UserId"])))
+{
+    <li>@Html.ActionLink("Sign In", "SignIn", "Account")</li>
+}
+else
+{
+    <li>@Html.ActionLink("Employees", "Index", "Employees")</li>
+    <li><a href="#">Welcome, @Session["Username"]</a></li>
+    <li>@Html.ActionLink("Sign Out", "SignOut", "Account")</li>
+
+}
+
